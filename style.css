@@ -1,0 +1,300 @@
+@charset "UTF-8";
+
+html, body {
+  text-rendering: optimizeLegibility;
+  font-size: 1rem;
+  color:#444;
+  font-family:Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.45;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;   /* Safari/Chrome, other WebKit */
+       -moz-box-sizing: border-box;   /* Firefox, other Gecko */
+            box-sizing: border-box;   /* Opera/IE 8+ */
+}
+.content {
+  width: 100%;
+  height: 100%;
+}
+p {
+  margin-bottom: 1.3em;
+}
+h1, h2, h3, h4 {
+/*  margin: 1.414em 0 0.5em; */
+  margin: 1.414em 0 1.414em;
+  font-weight: inherit;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.5em; /* */
+  font-size: 6.854rem;
+}
+h2 {
+  font-size: 4.236rem;
+  margin: 0.618em 0;
+}
+h3 {
+  font-size: 2.618rem;
+}
+h4 {
+  font-size: 1.618rem;
+}
+small, .font_small {
+  font-size: 0.618rem;
+}
+
+a {
+  /*color: #f0f0f0;*/
+  text-decoration: none;
+/*  -webkit-transition: 0.25s;
+     -moz-transition: 0.25s;
+       -o-transition: 0.25s;
+          transition: 0.25s;*/
+  cursor: pointer;
+}
+a:hover,
+a:focus,
+a:active {
+  /*color: #cdcdcd;*/
+  border-bottom: 1px dotted #eee;
+}
+
+.r {
+  margin: 0 3.5%;
+}
+.c {
+  text-align: center;
+}
+.secondary {
+  color: #696969;
+}
+.cf:after {
+ content: " ";
+ visibility: hidden;
+ display: block;
+ height: 0;
+ clear: both;
+ font-size: 0;
+}
+
+
+/*               */
+/*HAUPTNAVIGATION*/
+/*               */
+.nav, .timecontainer, .gifcontainer, .weathercontainer {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.nav-item {
+  float: left;
+  width: 25%;
+  height: 100%;
+  text-align: center;
+  display: block;
+  color: #efefef;
+}
+.time, .timecontainer {
+  background-color: #1f8b5d;
+}
+.gif, .gifcontainer {
+  background-color: #d55c61;
+}
+.weather, .weathercontainer {
+  background-color: #367BA2; /*#0076d2*/
+}
+.clrs, .clrscontainer {
+  background-color: #ffca55;
+}
+.home {
+  background-color: #efefef;
+}
+/*Der Text im <a> element .nav-item wird mit dem <span> element optimal vertikal zentriert*/
+.nav-item h3, .clock {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  text-align: center;
+}
+
+
+/*NAVBAR*/
+.navbar {
+  padding: 0;
+  margin: 0;
+  -webkit-transition-timing-function: ease-out;
+     -moz-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+}
+.navbar *:hover {
+/*  line-height: 0.4;
+  color: rgba(0,0,0,0.0);*/
+}
+.navbar-item {
+  width: 20%;
+  /*height: 10px;*/
+  list-style: none;
+  float: left;
+  /*display: inline-block;*/
+  text-align: center;
+  font-size: 1.618rem;
+  color: #f0f0f0;
+  line-height: 2;
+  -webkit-transition-timing-function: ease-out;
+     -moz-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+}
+.navbar-item:hover {
+  color: #eee;
+  -webkit-transition-timing-function: ease-out;
+     -moz-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+}
+.shrinked {
+  line-height: 0.4;
+  color: rgba(0,0,0,0.0);
+  -webkit-transition-timing-function: ease-out;
+     -moz-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+}
+
+
+/*      */
+/* TIME */
+/*      */
+.clock {
+  font-size: 4.236rem;
+  border-style:solid;
+  border-width:6px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #39a577;
+  color: #1f8b5d;
+  /*width: 75%;*/
+  margin: 0 auto;
+  display: table;
+  text-align: center;
+}
+#date, #time {
+  margin:0px;
+  padding-top:0px;
+  padding-bottom:0px;
+  /*height:100%;
+  min-height:100%;*/
+  float:left;
+  display: inline-block;
+}
+#stunden, #wochentag {
+  padding-left:15px;
+}
+#monat, #sekunden {
+  padding-right:15px;
+}
+/*Zwischenwand*/
+#time {
+  border-right-style:solid;
+  border-right-width:3px;
+}
+#date {
+  border-left-style:solid;
+  border-left-width:3px;
+}
+/*Hervorhebung des Tags*/
+#tag {
+  font-weight: 500;
+}
+#time span, #date span{
+  color: #067244;
+}
+
+
+/*         */
+/* WEATHER */
+/*         */
+@media only screen and (max-width: 480px) {
+  /*KLEIN*/
+  .tile {
+    width: 98%;
+  }
+  .tile:not(:nth-last-child(1)) {
+    margin-bottom: 0.75em;
+  }
+}
+@media only screen and (min-width: 481px) {
+  /*GROß*/
+  .tile {
+    float: left;
+    width: 48%;
+  }
+}
+.weather-container {
+  padding: 1%;
+  text-align: center;
+}
+.tile {
+  overflow: auto;
+  margin: 1%;
+  background-color: #ebebeb;
+  border-radius: 0.3em;
+  border-bottom: 0.25em solid #ddd;
+}
+
+
+/*WIND-ICONS*/
+.icon-wind-W:before {
+  content: "\e600";
+}
+.icon-wind-SW:before, .icon-wind-SSW:before, .icon-wind-WSW:before {
+  content: "\e601";
+}
+.icon-wind-SE:before, .icon-wind-SSE:before, .icon-wind-ESE:before {
+  content: "\e602";
+}
+.icon-wind-S:before {
+  content: "\e603";
+}
+.icon-wind-NW:before, .icon-wind-NNW:before, .icon-wind-WNW:before {
+  content: "\e604";
+}
+.icon-wind-NE:before, .icon-wind-NNE:before, .icon-wind-ENE:before {
+  content: "\e605";
+}
+.icon-wind-N:before {
+  content: "\e606";
+}
+.icon-wind-E:before {
+  content: "\e607";
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.woff?uvdrl1') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
